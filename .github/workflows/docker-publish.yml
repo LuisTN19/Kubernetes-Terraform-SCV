@@ -20,6 +20,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./ejercicio2          
+          file: ./ejercicio2/Dockerfile  
           push: true
-          tags: luistaracena/matomo-custom:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/matomo-custom:latest
