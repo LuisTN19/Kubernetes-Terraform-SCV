@@ -16,7 +16,7 @@ resource "kubernetes_deployment" "matomo" {
       spec {
         container {
           name  = "matomo"
-          image = var.dockerhub_username
+          image = var.dockerhub_image
           
           port {
             container_port = 80

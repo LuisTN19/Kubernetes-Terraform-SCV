@@ -1,5 +1,5 @@
 variable "host_port" {
-  description = "Puerto del host mapeado en kind (debe coincidir con kind-config.yaml)"
+  description = "Puerto NodePort del servicio. Debe coincidir con el 'containerPort' definido en el mapeo de puertos de Kind"
   type        = number
 }
 
@@ -10,7 +10,7 @@ variable "mariadb_root_password" {
 }
 
 variable "mariadb_user" {
-  description = "Usuario para la base de datos de Matomo"
+  description = "Usuario de la base de datos"
   type        = string
 }
 
@@ -25,7 +25,7 @@ variable "mariadb_database" {
   type        = string
 }
 
-variable "dockerhub_username" {
-  description = "Docker Hub username for custom Matomo image"
+variable "dockerhub_image" {
+  description = "Referencia completa de la imagen en Docker Hub, incluyendo el formato 'usuario/nombre-imagen:tag'."
   type        = string 
 }
